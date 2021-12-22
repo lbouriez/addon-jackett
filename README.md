@@ -30,7 +30,7 @@ Example add-on configuration, with all available options:
 
 ```json
 {
-    "black_hole": "/share/blackhole"
+  "black_hole": "/share/blackhole"
 }
 ```
 
