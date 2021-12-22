@@ -56,5 +56,3 @@ RUN \
 
 # Copy root filesystem
 COPY rootfs /
-
-# CMD [ "/run.sh" ]

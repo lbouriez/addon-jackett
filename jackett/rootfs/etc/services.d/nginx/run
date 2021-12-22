@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::net.wait_for 9117
+
+bashio::log.info "Starting NGinx..."
+exec nginx
