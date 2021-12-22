@@ -36,9 +36,15 @@ Example add-on configuration, with all available options:
 
 **Note**: _This should only be changed if you need the torrent files to be saved in a different location._
 
+The url to use in sonarr and other tool is not the one displayed in jackett, instead use it like: **HASSIO_IP:8889**
+
 ### Option: `black_hole`
 
 The `black_hole` option controls the location of saved torrent files. It can be set to share, config or ssl folders.
+
+### Option: `api_key`
+
+The `api_key` option allow you to set a permanent api key that will not change.
 
 ## Support
 

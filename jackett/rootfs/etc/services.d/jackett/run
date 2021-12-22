@@ -4,6 +4,7 @@ declare ingress_interface
 declare ingress_port
 declare ingress_entry
 declare black_hole
+declare api_key
 WAIT_PIDS=()
 
 bashio::log.info "starting...."
@@ -29,8 +30,10 @@ if ! bashio::fs.directory_exists '/config/jackett'; then
 fi
 
 black_hole=$(bashio::config 'black_hole')
+api_key=$(bashio::config 'api_key')
 
 bashio::log.info "Black hole: ${black_hole}"
+bashio::log.info "Api key is: ${api_key}"
 
 if ! bashio::fs.directory_exists "${black_hole}"; then
 	mkdir -p "${black_hole}" || bashio::exit.nok "error in folder creation 3"
@@ -39,6 +42,8 @@ fi
 mv /Jackett/ServerConfig.json /config/Jackett/ServerConfig.json || bashio::exit.nok "error in config move"
 
 sed -i "s#%%black_hole%%#${black_hole}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in blackhole sed"
+
+sed -i "s#%%api_key%%#${api_key}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in api_key sed"
 
 sed -i "s#%%basepath%%#${ingress_entry}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in port sed"
 

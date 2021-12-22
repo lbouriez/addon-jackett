@@ -1,7 +1,7 @@
 {
   "Port": 8889,
   "AllowExternal": true,
-  "APIKey": "",
+  "APIKey": "%%api_key%%",
   "AdminPassword": null,
   "InstanceId": "",
   "BlackholeDir": "%%black_hole%%",
