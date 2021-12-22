@@ -1,6 +1,4 @@
 #!/usr/bin/env bashio
-declare port
-declare certfile
 declare hassio_dns
 declare ingress_interface
 declare ingress_port
@@ -35,7 +33,7 @@ black_hole=$(bashio::config 'black_hole')
 bashio::log.info "Black hole: ${black_hole}"
 
 if ! bashio::fs.directory_exists "${black_hole}"; then
-	mkdir -p $black_hole || bashio::exit.nok "error in folder creation 3"
+	mkdir -p "${black_hole}" || bashio::exit.nok "error in folder creation 3"
 fi
 
 mv /Jackett/ServerConfig.json /config/Jackett/ServerConfig.json || bashio::exit.nok "error in config move"
