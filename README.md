@@ -1,21 +1,19 @@
 # Hass.io Add-on: Jackett Proxy Server
 
-
-![Supports aarch64 Architecture][aarch64-shield] 
-![Supports amd64 Architecture][amd64-shield] 
-![Supports armhf Architecture][armhf-shield] 
-![Supports armv7 Architecture][armv7-shield] 
-![Supports i386 Architecture][i386-shield] 
-
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
 
 [![GitHub Release][releases-shield]][releases]
 ![License][license-shield]
 ![Travis Ci][travis-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-* * *
-![Jackett Logo](images/jackett-banner.png)
+---
 
+![Jackett Logo](images/jackett-banner.png)
 
 ## About
 
@@ -37,7 +35,6 @@ To get the add-on running:
 2. Have some patience and wait a couple of minutes.
 3. Check the add-on log output to see the result.
 
-
 ## Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
@@ -46,7 +43,7 @@ Example add-on configuration, with all available options:
 
 ```json
 {
-    "black_hole": "/share/blackhole"
+  "black_hole": "/share/blackhole"
 }
 ```
 
@@ -56,12 +53,11 @@ Example add-on configuration, with all available options:
 
 The `black_hole` option controls the location of saved torrent files. It can be set to share, config or ssl folders.
 
-
 ## Support
 
 In case you've found a bug, please open an issue on our GitHub [issue].
 
-There has been reports of the **Web UI not loading** on some set-ups. This is caused from the browser blocking an API call to home assistant. If you open the browser console and find the blocked URL and manual amend it to HTTPS the add-on functions as it should. If this doesn't fix it for you, open an [issue]. 
+There has been reports of the **Web UI not loading** on some set-ups. This is caused from the browser blocking an API call to home assistant. If you open the browser console and find the blocked URL and manual amend it to HTTPS the add-on functions as it should. If this doesn't fix it for you, open an [issue].
 
 ## License
 
@@ -79,7 +75,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[Jackett]: https://github.com/Jackett/Jackett
+[jackett]: https://github.com/Jackett/Jackett
 [issue]: https://github.com/Sabuto/hassio-jackett/issues
 [travis-shield]: https://img.shields.io/travis/sabuto/hassio-jackett
 [releases-shield]: https://img.shields.io/github/v/release/sabuto/hassio-jackett

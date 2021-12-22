@@ -2,18 +2,14 @@
   "name": "Jackett",
   "version": "0.1.2",
   "slug": "jackett",
-  "description" : "An addon to add jackett to hassio",
-  "url" : "https://github.com/lbouriez/hassio-addons",
+  "description": "An addon to add jackett to hassio",
+  "url": "https://github.com/lbouriez/hassio-addons",
   "image": "ghcr.io/lbouriez/addon-jackett/{arch}",
   "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:9118]",
-  "map": [
-    "config:rw",
-    "share:rw",
-    "ssl"
-  ],
+  "map": ["config:rw", "share:rw", "ssl"],
   "hassio_api": true,
   "hassio_role": "default",
   "auth_api": true,
@@ -25,10 +21,10 @@
   "schema": {
     "black_hole": "str"
   },
-  "ports" : {
+  "ports": {
     "9117/tcp": null
   },
-  "ports_description" : {
+  "ports_description": {
     "9117/tcp": "Port for the web interface (not needed with ingress)"
   }
 }
