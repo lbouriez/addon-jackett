@@ -1,9 +1,10 @@
 {
   "name": "Jackett",
-  "version": "0.1.1",
-  "slug": "hassio_jackett",
+  "version": "0.1.2",
+  "slug": "jackett",
   "description" : "An addon to add jackett to hassio",
-  "url" : "https://github.com/Sabuto/hassio-jackett",
+  "url" : "https://github.com/lbouriez/hassio-addons",
+  "image": "ghcr.io/lbouriez/addon-jackett/{arch}",
   "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
   "boot": "auto",
@@ -29,6 +30,5 @@
   },
   "ports_description" : {
     "9117/tcp": "Port for the web interface (not needed with ingress)"
-  },
-  "image" : "sabuto/{arch}-hassio-jackett"
+  }
 }

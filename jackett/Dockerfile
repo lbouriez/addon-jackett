@@ -1,14 +1,18 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 
-ARG BUILD_ARCH
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
-ARG JACKETT_RELEASE
+ARG \
+    BUILD_ARCH \
+    JACKETT_RELEASE=v0.20.193
 
 ENV XDG_DATA_HOME="/share/jackett" \
-XDG_CONFIG_HOME="/config"
+    XDG_CONFIG_HOME="/config"
 
-RUN apt-get update \
+# hadolint ignore=DL3008
+RUN \
+    apt-get update \
     && apt-get install -y --no-install-recommends \
               libicu60 \
               libssl1.0 \
