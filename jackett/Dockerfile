@@ -5,7 +5,7 @@ FROM ${BUILD_FROM}
 
 ARG \
     BUILD_ARCH=amd64 \
-    JACKETT_RELEASE=v0.20.193
+    JACKETT_RELEASE=v0.20.1102
 
 ENV XDG_DATA_HOME="/share/jackett" \
     XDG_CONFIG_HOME="/config"
